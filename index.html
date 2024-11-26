@@ -1,142 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-        <!-- Fontawesome link -->
-     <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
-    <title>Instagram</title>
-</head>
-<body>
-<!----start---
+	<!----start---
 pip3 install flask && python3 server.py
 > $ git add .
 > $ git commit -m "Photos-Instagram"
 > $ git push
 -->
-    <div class="container-fluid">
-    
-        <!-- LOGO INSTAGRAM -->
-        <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center">
-            <i class="fa-brands fa-instagram fa-2x me-2"></i> 
-            <h4>Instagram</h4>
-        </div>
 
-        <!-- Section button right -->
-        <div class="B1">
-        <!-- Button Create a New post -->
-          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Create a new post</button>
-           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a New post</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                   <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Caption:</label>
-                        <textarea class="form-control" placeholder="Add the caption of your post here"></textarea>
-                      </div>
-                    </form>
-                  </div>    
-                
-                <!-- Start Section Mini Icons -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 
-                <div class="Icons d-flex align-items-center justify-content-start">
-                    <i class="fa-solid fa-camera d-flex"></i>
-                    <i class="fa-solid fa-location-dot d-flex"></i>
-                </div>
-                <!-- END Section button right -->
+	<!-- Bootstrap link Guardar siempre antes de HEAD-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Publish</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<!-- Button con 4 Opcion -- Split secondary button -->
+	<!-- Fontawesome link Guardar siempre antes de HEAD--->
+	<script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+	<title>Instagram</title>
+</head>
+<body>
 
-<div class="btn-group">
-    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-gear"></i></button>
-    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+	<div class="container-fluid">
+
+		<!-- LOGO INSTAGRAM Left-->
+		<div class="d-flex justify-content-between align-items-center">
+
+			<div class="d-flex align-items-center">
+				<i class="fa-brands fa-instagram fa-2x me-2"></i>
+				<h4>Instagram</h4>
+			</div>
+
+			<!-- Section button right -->
+			<div class="B1">
+				<!-- Button Create a New post -->
+				<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Create a new post</button>
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Create a New post</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="mb-3">
+										<label for="message-text" class="col-form-label">Caption:</label>
+										<textarea class="form-control" placeholder="Add the caption of your post here"></textarea>
+									</div>
+								</form>
+							</div>
+
+							<!-- Start Section Mini Icons -->
+
+							<div class="Icons d-flex align-items-center justify-content-start">
+
+								<button class="col-1 border rounded p-1 m-1">
+                    <i class="fa-solid fa-camera"></i>
+                   </button>
+
+								<button class="col-1 border rounded p-1 m-1">
+                    <i class="fa-solid fa-location-dot"></i>
+                   </button>
+							</div>
+							<!-- END Section button right -->
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-success">Publish</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Button con 4 Opcion -- Split secondary button -->
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-secondary"><i class="fa-solid fa-gear"></i></button>
+					<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li><a class="dropdown-item" href="#">Accesibility</a></li>
-      <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
-    </ul>
-  </div>
-        </div>
-    </div>
-  
-    <section id="ig_posts_search" class="col-12 p-0 m-0">
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Profile</a></li>
+						<li><a class="dropdown-item" href="#">Accesibility</a></li>
+						<li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-            <!---ROW 1--->
-            <div class="row">
-                        <div class="col-4 p-1">
-                            <img style="height: 30vw; object-fit: cover;" src="images/1.jpg" class="img-fluid w-100" alt="">
-                        </div>
-                        <div class="col-4 p-1">
-                            <img style="height: 30vw; object-fit: cover;" src="images/2.jpg" class="img-fluid w-100" alt="">
-                        </div>
-                        <div class="col-4 p-1">
-                            <img style="height: 30vw; object-fit: cover;" src=" images/3.jpg" class="img-fluid w-100" alt="">
-                        </div>
-            </div>
+		<!--Comienza NAV TAB-->
 
-            <!---ROW 2--->
-            <div class="row">
-                <div class="col-4 p-1">
-                    <img style="height: 30vw; object-fit: cover;" src="images/4.jpg" class="img-fluid w-100" alt="">
-                </div>
-                <div class="col-4 p-1">
-                    <img style="height: 30vw; object-fit: cover;" src="images/5.jpg" class="img-fluid w-100" alt="">
-                </div>
-                <div class="col-4 p-1">
-                    <img style="height: 30vw; object-fit: cover;" src=" images/6.jpg" class="img-fluid w-100" alt="">
-                </div>
-            </div>
+		<div>
+			<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
 
-            <!---ROW 3--->
-            <div class="row">
-                <div class="col-4 p-1">
-                    <img style="height: 30vw; object-fit: cover;" src="images/7.jpg" class="img-fluid w-100" alt="">
-                </div>
-                <div class="col-4 p-1">
-                    <img style="height: 30vw; object-fit: cover;" src="images/8.jpg" class="img-fluid w-100" alt="">
-                </div>
-                <div class="col-4 p-1">
-                    <img style="height: 30vw; object-fit: cover;" src=" images/9.jpg" class="img-fluid w-100" alt="">
-                </div>
-            </div>
+				<li class="nav-item" role="presentation">
+
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            <i class="bi bi-table"></i>
+        </button>
+				</li>
+
+				<li class="nav-item" role="presentation">
+
+					<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+           <i class="bi bi-square-fill"></i>
+         </button>
+				</li>
+
+			</ul>
+
+			<div class="tab-content" id="myTabContent">
+
+				<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+					<section id="ig_posts_search" class="col-12 p-0 m-0">
+
+						<!---Start imagenes cuadricolas-->
+
+						<!---ROW 1--->
+						<div class="row">
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src="images/1.jpg" class="img-fluid w-100" alt="">
+							</div>
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src="images/2.jpg" class="img-fluid w-100" alt="">
+							</div>
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src=" images/3.jpg" class="img-fluid w-100" alt="">
+							</div>
+						</div>
+
+						<!---ROW 2--->
+						<div class="row">
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src="images/4.jpg" class="img-fluid w-100" alt="">
+							</div>
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src="images/5.jpg" class="img-fluid w-100" alt="">
+							</div>
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src=" images/6.jpg" class="img-fluid w-100" alt="">
+							</div>
+						</div>
+
+						<!---ROW 3--->
+						<div class="row">
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src="images/7.jpg" class="img-fluid w-100" alt="">
+							</div>
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src="images/8.jpg" class="img-fluid w-100" alt="">
+							</div>
+							<div class="col-4 p-1">
+								<img style="height: 30vw; object-fit: cover;" src=" images/9.jpg" class="img-fluid w-100" alt="">
+							</div>
+						</div>
+
+					</section>
+
+				</div>
+
+        <!--Nav Tab para colocar imagenes en columna-->
+				<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+					<!---Start Cards-->
+					<!--IM 1--->
+					<div class="row">
+						<div class="col-6 mx-auto border rounded p-0">
+							<div class="d-flex p-2">
+								<div class="w-100 fs-4">strawberry!!</div><small class="align-bottom">08/26</small></div>
+							<img style="height: 30vw; object-fit: cover;" src="images/7.jpg" class="img-fluid w-100" alt="">
+							<strong>204 Likes</strong>
+							<p>This is an example of a very good of strawberry</p>
+						</div>
+					</div>
+					<!--IM 2--->
+					<div class="row">
+						<div class="col-6 mx-auto border rounded p-0">
+							<div class="d-flex p-2">
+								<div class="w-100 fs-4">Smile!!</div><small class="align-bottom">08/26</small></div>
+							<img style="height: 30vw; object-fit: cover;" src="images/2.jpg" class="img-fluid w-100" alt="">
+							<strong>204 Likes</strong>
+							<p>This is an example of a very good of smile</p>
+						</div>
+					</div>
+					<!--IM 3--->
+					<div class="row">
+						<div class="col-6 mx-auto border rounded p-0">
+							<div class="d-flex p-2">
+								<div class="w-100 fs-4">Face!!</div><small class="align-bottom">08/26</small></div>
+							<img style="height: 30vw; object-fit: cover;" src="images/1.jpg" class="img-fluid w-100" alt="">
+							<strong>204 Likes</strong>
+							<p>This is an example of a very good of face</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
 
 
 
-        </section>
 
-     </div>
+	</div>
 
- <!-- Guardar Funcionalidades de Botones Bootstrap link  -->
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
- integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
- crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
- integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
- crossorigin="anonymous"></script>
-    
+	<!-- Guardar Funcionalidades de Botones Bootstrap link siempre al antes del final de Body  -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
 </body>
 </html>
